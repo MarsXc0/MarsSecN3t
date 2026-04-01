@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: users-service
+  namespace: users
+  labels:
+    app: users-service
+    project: cybernest
+    tier: backend
+spec:
+  containers:
+  - name: users-service
+    image: nginx:alpine
+    ports:
+    - containerPort: 80

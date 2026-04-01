@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ctf-service
+  namespace: ctf
+  labels:
+    app: ctf-service
+    project: cybernest
+    tier: backend
+spec:
+  containers:
+  - name: ctf-service
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
