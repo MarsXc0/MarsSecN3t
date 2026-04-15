@@ -3,7 +3,6 @@ kind: Namespace
 metadata:
   name: community
   labels:
-    project: cybernest
+    project: SecN3t
     team: community
-
 

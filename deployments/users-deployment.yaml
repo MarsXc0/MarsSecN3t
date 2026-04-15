@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-service
+  namespace: users
+  labels:
+    app: users-service
+    project: SecN3t
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: users-service
+      project: SecN3t
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: users-service
+        project: SecN3t
+        tier: backend
+    spec:
+      containers:
+      - name: users-service
+        image: nginx:alpine
+        ports:
+        - containerPort: 80

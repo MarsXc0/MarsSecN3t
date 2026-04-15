@@ -3,5 +3,5 @@ kind: Namespace
 metadata:
   name: monitoring
   labels:
-    project: cybernest
+    project: SecN3t
     team: monitoring

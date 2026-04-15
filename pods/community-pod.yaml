@@ -5,7 +5,7 @@ metadata:
   namespace: community
   labels:
     app: community-service
-    project: cybernest
+    project: SecN3t
     tier: backend
 spec:
   containers:
